@@ -2,16 +2,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>TOP|○○Design</title>
+<title><?php bloginfo('description');?></title>
 
 <?php wp_head();?>
 </head>
-<body>
+<body <?php body_class();?>>
 <div class="container">
 	<header>
-		<a href="">
+		<a href="<?php echo home_url();?>">
 			<h1 class="logo">
-				MakotoDesign
+				<?php bloginfo('name')?>
 			</h1>
 		</a>
 		<nav class="utility_nav">
