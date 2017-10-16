@@ -1,0 +1,314 @@
+﻿@charset "UTF-8";
+
+body {
+    font-family: "MS PGothic","Osaka",Arial,sans-serif;
+    font-size: 75%;
+}
+
+/* -------Common class-----*/
+
+/*箱の幅にpaddingとborderの幅の分を含める*/
+div,header,nav,ul,li,a,main,section,article,aside,h1,h2,h3,h4,h5,h6,p {
+box-sizing:border-box;
+}
+
+/* clearfix */
+.clearfix:after{
+display:block;	
+content:'';
+width:100%;
+height:0;
+clear:both;
+visibility:hidden;
+}
+
+/* clear */
+.clear {
+clear:both;
+}
+
+/*存在させるけど非表示*/
+.invisible {
+visibility: hidden;
+}
+
+
+
+/* ↑-------Common class-----　*/
+
+
+/* Layout */
+/*
+大外のcontainerの中の箱の横幅は全部相対値（%）にしていますので
+大外の横幅変えるだけで全体の横幅が調節できます
+*/
+.container {
+width:960px;
+margin:40px auto 0 auto;
+
+}
+
+.main_header {
+height:300px;
+/*↓ダミーの背景画像です。好きな画像に差し替えて下さいね*/
+background-image:url(../img/animals.jpg);
+background-position:top center;
+
+}
+
+footer {
+min-height:400px;
+background-color:#1b8ae5;
+margin-bottom: 50px;
+}
+
+
+
+/*上部ロゴ*/
+.logo {
+display:inline-block;
+padding-left:10px;
+padding-right:10px;
+height: 60px;
+/*background-image: url(../img/logo.png);*/
+background-color: #e02c2c;
+text-align: center;
+float: left;
+margin-bottom: 10px;
+font-size:50pt;
+line-height:60px;
+color:#fff;
+font-weight:900;
+letter-spacing:-0.1em;
+border-top-left-radius:30px;	
+}
+
+.logo:hover {
+background-color: #FF795B;
+transition:0.5s linear;	
+}
+
+/* ユーティリティナビゲーションメニュー*/
+.utility_nav  {
+display: inline-block;
+float:right;
+margin-top: 30px;	
+}
+.utility_nav li {
+display: inline-block;
+margin-left: 10px;	
+}
+.utility_nav a{
+text-decoration: none;
+color:#000;	
+}
+
+.utility_nav a:hover {
+text-decoration: underline;
+}
+
+
+/* メインナビゲーションメニュー*/
+.main_nav {
+height:40px;
+}
+
+.main_nav a {
+display:block;
+list-style-type:none;
+float:left;
+line-height:40px;
+text-align:center;
+text-decoration:none;
+background-color:#E02C2C;
+color:#fff;
+width:calc(100% / 6);
+width:-moz-calc(100% / 6);
+width:-webkit-calc(100% / 6);
+
+}
+
+.main_nav li:last-child a{
+border-bottom-right-radius:30px;
+}
+/*
+.main_nav li:not(:last-child) a {
+border-right:1px solid #000;
+}
+*/
+
+.main_nav a:hover {
+background-color: #FF795B;
+color:#fff;	
+transition:0.5s linear;
+}
+
+/* メインコンテンツエリア　*/
+.gloval_main .contents {
+width:70%;
+float:left;
+}
+
+.gloval_main .contents .content_sentence {
+width:calc(100% - 20px);
+width:-moz-calc(100% - 20px);
+width:-webkit-calc(100% - 20px);
+margin:10px;	
+min-height:770px;
+/*
+background-color: #ccc;
+*/
+}
+
+.content_fullwidth {
+border-top:2px solid #ccc;
+margin:20px 0;
+padding:10px;
+}
+
+.content_fullwidth ul li {
+width:calc((100% - 80px) / 4);
+width:-moz-calc((100% - 80px) / 4);
+width:-webkit-calc((100% - 80px) / 4);
+min-height:300px;
+margin:10px;
+float:left;
+}
+
+.content_sentence_fullwidth {
+min-height:400px;
+margin:10px;
+}
+
+/* サイドメニューエリア　*/
+.gloval_main .sidemenu {
+margin-top:40px;
+width:30%;
+float:left;
+
+}
+
+.gloval_main .sidemenu .widget {
+width:calc(100% - 20px);
+width:-moz-calc(100% - 20px);
+width:-webkit-calc(100% - 20px);
+min-height:250px;
+margin:10px;
+
+}
+
+/*test style*/
+
+.top_title{
+font-size:20pt;
+text-align:center;
+padding:30px 0 40px 0;
+
+}
+
+.top_content p{
+font-size:12pt;
+line-height:1.8em;
+
+}
+.widget_title{
+font-size:14pt;
+text-align:center;
+padding-top:10px;
+margin-bottom:20px;
+}
+
+.post_prev_title{
+ font-size:12pt;
+margin-bottom:20px;
+
+}
+
+.top_satatic_title{
+font-size:16pt;
+margin-bottom:40px;
+text-align:center;
+}
+
+.top_satatic_content p{
+font-size:12pt;
+line-height:1.4em;
+
+}
+
+/*widget style*/
+
+
+
+.widget_content{
+min-height:300px;
+background-color:#ccc;
+}
+
+/*post prev style*/
+.post_prev_content{
+min-height:200px;
+background-color:#ccc;
+
+}
+
+/*top_static_content*/
+.top_satatic_content{
+min-height:200px;
+
+}
+
+@media screen and (max-width:960px){
+
+	.container{
+		width:100%;
+	}
+
+	.main_nav a{
+		width:calc(100% / 3);
+		line-height:80px;
+		font-size:14pt;
+
+	}
+
+	.main_nav li:nth-child(-n+3) a{
+		border-bottom:1px solid #fff;
+
+	}
+
+	.main_nav li:last-child a{
+		border-radius:0;
+
+	}
+
+	.gloval_main .contents,
+	.gloval_main .sidemenu
+	{
+		float:none;
+		width:100%;
+		padding-left:20px;
+		padding-right:20px;
+
+	}
+
+	.gloval_main .contents p img{
+		width:100%;
+
+	}
+
+	.content_fullwidth ul li{
+		width: calc((100% - 80px) / 2);
+
+	}
+	.top_title{
+		clear:both;
+	}
+
+}
+
+/*mobile size*/
+@media screen and (max-width:400px){
+	.main_nav a{
+		width:calc(100% / 2);
+	}
+}
