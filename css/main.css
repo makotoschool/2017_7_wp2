@@ -154,7 +154,7 @@ width:calc(100% - 20px);
 width:-moz-calc(100% - 20px);
 width:-webkit-calc(100% - 20px);
 margin:10px;	
-min-height:770px;
+min-height:200px;
 /*
 background-color: #ccc;
 */
@@ -257,6 +257,8 @@ background-color:#ccc;
 min-height:200px;
 
 }
+
+
 
 @media screen and (max-width:960px){
 
