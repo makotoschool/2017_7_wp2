@@ -9,5 +9,11 @@ function theme_scripts( ) {
 
     add_action( 'wp_enqueue_scripts', 'theme_scripts' );
 
+//カスタムメニュー機能を有効にする
+register_nav_menus(array( 
+'mainnavi' => 'メインナビゲーションバーの内容です',
+ 'utility' => 'ヘッダー上部のナビの内容です'
+ ));
+
 
 
