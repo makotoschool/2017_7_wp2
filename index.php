@@ -1,43 +1,4 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title><?php bloginfo('description');?></title>
-
-<?php wp_head();?>
-</head>
-<body <?php body_class();?>>
-<div class="container">
-	<header>
-		<a href="<?php echo home_url();?>">
-			<h1 class="logo">
-				<?php bloginfo('name')?>
-			</h1>
-		</a>
-		<nav class="utility_nav">
-			<ul>
-			<li><a href="">NEWS</a></li>
-			<li><a href="">SITEMAP</a></li>
-			<li><a href="">PRIVACY</a></li>
-			</ul>
-		</nav>
-		<div class="main_header clear">
-			<h2>
-				<span class="invisible">これも検索エンジン対策の見出しです</span>
-			</h2>
-
-		</div>
-	</header>
-	<nav class="main_nav clearfix">
-		<ul>
-		<li><a href="">menu</a></li>
-		<li><a href="">menu</a></li>
-		<li><a href="">menu</a></li>
-		<li><a href="">menu</a></li>
-		<li><a href="">menu</a></li>
-		<li><a href="">menu</a></li>
-		</ul>
-	</nav>
+﻿<?php get_header();?>
 	<main>
 		<div class="gloval_main clearfix">
 			<section class="contents">
@@ -64,21 +25,7 @@
 
 			</section>
 
-			<aside class="sidemenu">
-				<div class="widget">
-					<h3 class="widget_title">タイトル</h3>
-					<div class="widget_content"></div>
-				
-				</div>
-				<div class="widget">
-					<h3 class="widget_title">タイトル</h3>
-					<div class="widget_content"></div>
-				</div>
-				<div class="widget">
-					<h3 class="widget_title">タイトル</h3>
-					<div class="widget_content"></div>
-				</div>
-			</aside>
+			<?php get_sidebar();?>
 
 		</div>
 		<section class="content_fullwidth clearfix">
@@ -120,9 +67,5 @@
 			</article>			
 		</section>
 	</main>
-	<footer>
-	</footer>
-</div>
-<?php wp_footer();?>
-</body>
-</html>
+<?php get_footer();?>
+
