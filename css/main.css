@@ -258,7 +258,9 @@ min-height:200px;
 
 }
 
-
+.category .content_sentence .top_content p{
+display:inline;
+}
 
 @media screen and (max-width:960px){
 
