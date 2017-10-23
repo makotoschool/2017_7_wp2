@@ -27,7 +27,6 @@
 					get_sidebar();
 				endif;
 
-
 			?>
 
 

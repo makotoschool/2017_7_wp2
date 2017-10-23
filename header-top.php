@@ -21,20 +21,18 @@
 			<li><a href="">PRIVACY</a></li>
 			</ul>
 		</nav>
-<!--
 		<div class="main_header clear">
 			<h2>
 				<span class="invisible">これも検索エンジン対策の見出しです</span>
 			</h2>
 
 		</div>
--->
 	</header>
 	<?php 
 		wp_nav_menu(array(
 			'theme_location'=>'mainnavi',
 			'container'=>'nav',
-			'container_class'=>'main_nav clear clearfix'
+			'container_class'=>'main_nav clearfix'
 
 		));
 

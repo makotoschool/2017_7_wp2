@@ -1,4 +1,4 @@
-﻿<?php get_header();?>
+﻿<?php get_header('top');?>
 	<main>
 		<div class="gloval_main clearfix">
 			<section class="contents">
