@@ -5,18 +5,19 @@
 				
 					<?php if(have_posts()):while(have_posts()):the_post();?>
 						<article class="content_sentence">
-							<h2 class="top_title"><?php the_title();?></h2>
-							<div class="top_content"><?php the_content();?></div>
-						</article>
-						<?php previous_post_link('&laquo;%link', '%title', TRUE);?>&nbsp;&nbsp;
-						<?php next_post_link('%link', '%title&raquo', TRUE);?>
+							<h2 class="top_title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
+							<div class="top_content">
+								<?php the_excerpt( );?>
+								<a href="<?php the_permalink();?>">続きを読みたい！</a>
 
+							</div>
+						</article>
 					<?php endwhile;endif;?>
 						
 
 			</section>
 
-			<?php get_sidebar();?>
+			<?php get_sidebar('dtp');?>
 
 		</div>
 

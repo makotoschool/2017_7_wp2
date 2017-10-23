@@ -8,15 +8,12 @@
 							<h2 class="top_title"><?php the_title();?></h2>
 							<div class="top_content"><?php the_content();?></div>
 						</article>
-						<?php previous_post_link('&laquo;%link', '%title', TRUE);?>&nbsp;&nbsp;
-						<?php next_post_link('%link', '%title&raquo', TRUE);?>
-
 					<?php endwhile;endif;?>
 						
 
 			</section>
 
-			<?php get_sidebar();?>
+			
 
 		</div>
 
