@@ -16,28 +16,44 @@
 		</div>
 		<section class="content_fullwidth clearfix">
 			<h2>新着記事</h2>
-			<ul>				
-			<li class="post_prev">
-				<h3 class="post_prev_title">新着ダミータイトル</h3>
-				<div class="post_prev_content"></div>
-			</li>
-			<li class="post_prev">
-				<h3 class="post_prev_title">新着ダミータイトル</h3>
-				<div class="post_prev_content"></div>				
-			</li>
-			<li class="post_prev">
-				<h3 class="post_prev_title">新着ダミータイトル</h3>
-				<div class="post_prev_content"></div>
-			</li>
-			<li class="post_prev">
-				<h3 class="post_prev_title">新着ダミータイトル</h3>
-				<div class="post_prev_content"></div>
-			</li>
+			<ul>
+				<?php
+					//クエリを発行
+					$posts=get_posts(array(
+							'posts_per_page'=>4
+					
+							));
+					//$postsの中に結果のデータが配列で入ってる
+				foreach($posts as $post)://配列があるだけ繰り返す
+						setup_postdata($post);//取り出したデータをwp用に加工
+
+				?>
+					<li class="post_prev">
+						<h3 class="post_prev_title"><?php the_title();?></h3>
+						<div class="post_prev_content"><?php the_excerpt();?></div>
+					</li>
+				<?php endforeach;
+					wp_reset_postdata();
+				?>
+
 			</ul>
 		</section>
 		<section class="content_fullwidth">
-			<h2>固定記事</h2>
+		
 			<article class="content_sentence_fullwidth">
+				<?php 
+					$greeding=get_post(41);
+					/*
+					echo '<pre>';
+					var_dump($greeding);
+					echo '</pre>';
+*/
+				?>
+				<h2 class="top_satatic_title"><?php echo $greeding->post_title;?></h2>
+				<div class="top_satatic_content">
+					<?php echo $greeding->post_content;?>
+				</div>
+				<!--
 				<h3 class="top_satatic_title">ダミータイトル</h3>
 				<div class="top_satatic_content">
 					<p>
@@ -50,6 +66,7 @@
 					</p>
 
 				</div>
+				-->
 			</article>			
 		</section>
 	</main>
