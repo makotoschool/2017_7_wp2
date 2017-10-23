@@ -16,4 +16,27 @@ register_nav_menus(array(
  ));
 
 
+//ウィジェットメニューを有効にする
+sidebar_add('top');
+sidebar_add('blog');
+sidebar_add('web');
+sidebar_add('dtp');
+sidebar_add('footer');
+
+function sidebar_add($title){
+	register_sidebar(array(
+		'name'=>$title.'エリア',
+		'id'=>$title,
+		'before_widget'=>'<div class="widget">',
+		'after_widget'=>'</div>',
+		'before_title'=>'<h3class="widget_title">',
+		'after_title'=>'</h3>'
+
+	));
+}
+
+
+
+
+
 
