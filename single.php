@@ -15,8 +15,23 @@
 						
 
 			</section>
+			<?php 
+				//カテゴリーによって採用するサイドバーを変える
+				if(in_category('blog')):
+					get_sidebar('blog');
+				elseif(in_category('web')):
+					get_sidebar('web');
+				elseif(in_category('dtp')):
+					get_sidebar('dtp');
+				else:
+					get_sidebar();
+				endif;
 
-			<?php get_sidebar();?>
+
+			?>
+
+
+			<!--<?php get_sidebar();?>-->
 
 		</div>
 
